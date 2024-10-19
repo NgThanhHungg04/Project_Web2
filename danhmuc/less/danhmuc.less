@@ -1,0 +1,178 @@
+// Định nghĩa biến màu sắc và kích thước
+@font-family: 'Roboto', sans-serif;
+@bg-color: #e9ecef;
+@sidebar-bg-start: #343a40;
+@sidebar-bg-end: #212529;
+@sidebar-link-color: #adb5bd;
+@sidebar-link-hover-bg: #495057;
+@active-bg: #007bff;
+@active-color: white;
+@content-bg: #f8f9fa;
+@table-bg: white;
+@table-header-bg: #007bff;
+@table-row-hover-bg: #e2e6ea;
+@btn-success-bg: #28a745;
+@btn-success-hover-bg: #218838;
+@btn-outline-primary-hover-bg: #007bff;
+@btn-outline-danger-hover-bg: #dc3545;
+
+// Các kiểu cho body
+body {
+    font-family: @font-family;
+    background-color: @bg-color;
+}
+
+// Các kiểu cho sidebar
+.sidebar {
+    background: linear-gradient(135deg, @sidebar-bg-start, @sidebar-bg-end);
+    height: 100vh;
+    padding: 5rem;
+    color: white;
+
+    a {
+        color: @sidebar-link-color;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+        display: block;
+        font-size: 1.7rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background-color: @sidebar-link-hover-bg;
+            color: @active-color;
+            text-decoration: none;
+        }
+
+        &.active {
+            background-color: @active-bg;
+            color: @active-color;
+            font-weight: bold;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+.link-black {
+    color: black; // Đặt màu chữ thành đen
+    font-family: 'Arial', sans-serif;
+
+    &:hover {
+        color: darkgray; // Thay đổi màu khi di chuột qua liên kết
+    }
+}
+
+
+// Các kiểu cho nội dung
+.content {
+    padding: 2rem;
+    background-color: @content-bg;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+// Các kiểu cho bảng
+.table {
+    width: 100%; // Đặt chiều rộng bảng 100%
+    background-color: @table-bg;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+
+    th,
+    td {
+        text-align: center; // Căn giữa nội dung các ô
+        padding: 1rem; // Thêm khoảng cách cho các ô
+    }
+
+    thead {
+        th {
+            background-color: @table-header-bg;
+            color: white;
+            font-weight: bold;
+        }
+    }
+
+    tbody {
+        tr {
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: @table-row-hover-bg;
+            }
+        }
+    }
+}
+
+// Các kiểu cho nút
+.btn-outline-primary,
+.btn-outline-danger {
+    border-radius: 0.5rem;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.btn-outline-primary {
+    &:hover {
+        background-color: @btn-outline-primary-hover-bg;
+    }
+}
+
+.btn-outline-danger {
+    &:hover {
+        background-color: @btn-outline-danger-hover-bg;
+    }
+}
+
+// Các kiểu cho nhóm input
+.input-group {
+    width: 100%; // Đặt chiều rộng nhóm input 100%
+    max-width: 400px; // Chiều rộng tối đa cho nhóm input
+    margin: 0 auto 1rem; // Căn giữa và thêm khoảng cách dưới
+    display: flex; // Thêm display: flex để căn giữa dễ hơn
+    justify-content: center;
+
+    .form-control {
+        border-radius: 0.5rem 0 0 0.5rem;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            color: #6c757d;
+        }
+    }
+
+    .btn {
+        font-size: 15px;
+        width: 50px;
+        height: 34px;
+        border-radius: 0 0.5rem 0.5rem 0;
+        background-color: @btn-success-bg;
+
+        &:hover {
+            background-color: @btn-success-hover-bg;
+        }
+    }
+}
+
+// Các kiểu cho đường gạch
+hr {
+    border-top: 1px solid #dee2e6;
+    margin: 1rem 0;
+}
+
+// Các kiểu cho nút "Thêm Mới"
+.btn-dark {
+    margin: 0 60px 20px 0;
+    width: 100px;
+    height: 50px;
+    margin-top: 1rem; // Thêm khoảng cách trên cho nút "Thêm Mới"
+
+}

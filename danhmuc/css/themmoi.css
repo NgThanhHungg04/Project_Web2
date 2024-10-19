@@ -1,0 +1,116 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e9ecef;
+}
+.sidebar {
+  background: linear-gradient(135deg,#343a40,#212529);
+  height: 100vh;
+  padding: 5rem;
+  color: white;
+}
+.sidebar a {
+  color: #adb5bd;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  display: block;
+  font-size: 1.7rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.sidebar a:hover {
+  background-color: #495057;
+  color: white;
+  text-decoration: none;
+}
+.sidebar a.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+.sidebar a i {
+  margin-right: 10px;
+}
+.link-black {
+  color: black;
+  font-family: 'Arial', sans-serif;
+}
+.link-black:hover {
+  color: darkgray;
+}
+.content {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.table {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.15);
+}
+.table th,
+.table td {
+  text-align: center;
+  padding: 1rem;
+}
+.table thead th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+.table tbody tr:hover {
+  background-color: #e2e6ea;
+}
+.btn-outline-primary,
+.btn-outline-danger {
+  border-radius: 0.5rem;
+}
+.btn-outline-primary:hover,
+.btn-outline-danger:hover {
+  color: white;
+}
+.btn-outline-primary:hover {
+  background-color: #007bff;
+}
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+}
+.input-group {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: center;
+}
+.input-group .form-control {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.input-group .form-control:focus {
+  box-shadow: none;
+}
+.input-group .form-control::placeholder {
+  color: #6c757d;
+}
+.input-group .btn {
+  width: 50px;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: #28a745;
+}
+.input-group .btn:hover {
+  background-color: #218838;
+}
+hr {
+  border-top: 1px solid #dee2e6;
+  margin: 1rem 0;
+}
+.btn-dark {
+  margin: 0 60px 20px 0;
+  width: 100px;
+  height: 50px;
+  margin-top: 1rem;
+}
