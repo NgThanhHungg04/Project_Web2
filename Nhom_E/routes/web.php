@@ -15,8 +15,16 @@ use Illuminate\Http\Request;
 |
 */
 
+<<<<<<< HEAD
 // Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
 // Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
+=======
+Route::get('/', action:'App\Http\Controllers\HomeController@index');
+
+Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
+Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
+
+>>>>>>> category_admin
 
 Route::get('/admin', function () {
     $user = Session::get('user_admin');
@@ -30,6 +38,39 @@ Route::get('/admin', function () {
 });
 
 
+<<<<<<< HEAD
+=======
+
+Route::prefix('categories')->group(function () {
+    Route::get('/index', [
+    	'as'=>'categories.index',
+    	'uses'=>'App\Http\Controllers\CategoryController@index'
+    ]);
+    Route::get('/create', [
+    	'as'=>'categories.create',
+    	'uses'=>'App\Http\Controllers\CategoryController@create'
+    ]);
+    Route::post('/save', [
+    	'as'=>'categories.save',
+    	'uses'=>'App\Http\Controllers\CategoryController@save'
+    ]);
+    Route::get('/edit/{id}', [
+    	'as'=>'categories.edit',
+    	'uses'=>'App\Http\Controllers\CategoryController@edit'
+    ]);
+    Route::post('/saveedit/{id}', [
+    	'as'=>'categories.saveedit',
+    	'uses'=>'App\Http\Controllers\CategoryController@saveedit'
+    ]);
+    Route::get('/delete/{id}', [
+    	'as'=>'categories.delete',
+    	'uses'=>'App\Http\Controllers\CategoryController@delete'
+    ]);
+});
+
+
+
+>>>>>>> category_admin
 Route::prefix('products')->group(function () {
     Route::get('/index', [
     	'as'=>'products.index',
